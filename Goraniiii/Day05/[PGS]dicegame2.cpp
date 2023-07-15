@@ -1,0 +1,16 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(int a, int b, int c) {
+    int answer = a + b + c;
+    if(a == b || a == c || b == c) {
+        answer *= a*a + b*b + c*c;
+        if(a == b && b == c && c == a)  {
+            answer *= 3 * a*a*a;
+        }
+    }
+    
+    return answer;
+}
